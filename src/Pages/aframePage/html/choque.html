@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Choque</title>
+    <meta name="description" content="Links • A-Frame">
+    <script src="../js/aframe-master.js"></script>
+    <script src="../js/aframe-tooltip-component.js"></script>
+    <script src="../js/camera-position.js"></script>
+    <script src="../js/link-controls.js"></script>
+    <script src="../js/info-message.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene
+      raycaster="far: 100; objects: [link];"
+      cursor="rayOrigin: mouse"
+      info-message="htmlSrc: #messageText">
+      <a-assets>
+        <img id="thumbIndex" crossOrigin="anonymous" src="../assets/index.jpg">
+        <img id="thumbEgypt" crossOrigin="anonymous" src="../assets/camino.jpg">
+        <img id="thumbForest" crossOrigin="anonymous" src="../assets/mar.jpg">
+        <a-asset-item id="messageText" src="message.html"></a-asset-item>
+      </a-assets>
+      <a-link href="../index1.html" position="-3.5 1.5 -1.0" image="#thumbIndex"></a-link>
+      <a-link href="camino.html" position="0 1.5 -1.0" image="#thumbEgypt"></a-link>
+      <a-link href="mar.html" position="3.5 1.5 -1.0" image="#thumbForest"></a-link>
+      <a-entity light="type: point; color: #f4f4f4; intensity: 0.4; distance: 0" position="0 2 0"></a-entity>
+      <a-entity id="leftHand" link-controls="hand: left"></a-entity>
+      <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+
+      <a-sky id="skyElement" color="#ECECEC" src=""></a-sky>
+      
+      <script src="choque.js"></script>
+
+    </a-scene>
+  </body>
+</html>

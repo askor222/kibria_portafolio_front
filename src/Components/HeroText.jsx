@@ -1,16 +1,7 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: HeroText.jsx
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 03/06/2023
-*/
-
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const HeroText = () => {
-  const name = "bl33h ?";
+  const name = "Al portafolio";
 
   return (
     <div
@@ -30,7 +21,7 @@ const HeroText = () => {
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6, type: "spring" }}
           >
-            Who's{" "}
+            Bienvenido{" "}
           </m.span>
           <m.div
             initial={{ x: 100 }}
@@ -45,7 +36,7 @@ const HeroText = () => {
                 <span
                   key={index}
                   className="text-primary-400 bounce"
-                  style={{ fontSize: "1.2em" }}
+                  style={{ fontSize: "0.8em" }} // Ajusta el tamaño del texto aquí
                 >
                   {char}
                 </span>
